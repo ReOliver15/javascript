@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Boas-vindas</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+        button {
+            font-size: 15px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem Vindes</h1>
+    <p>Esse é o segundo desafio do curso de JS, onde usaremos um botão para ter interatividade com o usuário, e depois criaremos uma função para perguntar o nome e idade e exibir na tela após isso. A variavel nome vai receber o resultado de um prompt que vai aparecer na tela perguntando o nome do usuário.</p>
+
+    <button onclick = "desafio()">Inicie o desafio aqui!</button>
+
+    <script>
+        function desafio() {
+            let nome = window.prompt ('Qual o seu nome?')
+            let idade = window.prompt (`Oi ${nome}, quantos anos tu tem?`)
+            window.alert (`Prazer te conhecer ${nome}! Bacana que tu tem ${idade}! `)
+        }
+    </script>
+    
+</body>
+</html>
