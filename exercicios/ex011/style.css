@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+body {
+    font: 12pt Arial;
+    background-color: lightgray;
+}
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal; /* Peso da fonte */
+}
+button {
+    font-size: 12pt;
+    padding: 30px; /* Espaçamento interno*/
+}
