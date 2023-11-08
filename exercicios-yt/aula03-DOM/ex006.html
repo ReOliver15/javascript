@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background: rgb(144, 214, 39);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /* Altura da linha*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!--Só vai ser executado quando eu chamar o clicar() lá no script-->
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar) //Não precisa usar () depois do nome da função
+        a.addEventListener('mouseout', sair)
+        function clicar() {
+            a.innerText = 'Clicooooou!!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou o mouse!'
+        }
+        function sair() {
+            a.innerText = 'Saiu o mouse!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
