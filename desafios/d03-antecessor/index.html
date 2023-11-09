@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antecessor e Sucessor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 13pt;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /*Alinha os itens no centro da tela*/
+            margin-top: 30px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Número antecessor e sucessor</h1>
+        <button onclick="calc()">Calcule aqui</button>
+        <script>
+            function calc() {
+            let num = Number(window.prompt('Digite um número inteiro qualquer: ')) //Number para converter de string para número
+            let ant = num -= 1
+            let depois = num += 1
+            window.alert(`Antes de ${num}, temos o número ${ant}.\nDepois de ${num}, temos o número ${depois + 1}`) // \n quebra uma linha (new line)*/
+            }
+        </script>
+    </main>
+
+</body>
+</html>

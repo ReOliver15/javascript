@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o troco</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            font-size: 15px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculadora de Troco</h1>
+        <button onclick="calc()">Comprar produto</button><!--função do botão só vai ser ativado quando o user clicar no botão-->
+        <script>
+            function calc() {
+                let prod = window.prompt('Qual produto você está comprando?')
+                let valor = Number(window.prompt(`Quanto custa o ${prod} que você está comprando?`))
+                let valor_conv = valor.toLocaleString('pt-br',{style:'currency', currency:'BRL'})
+                let pag = Number(window.prompt(`Qual foi o valor que você deu para pagar ${prod}`))
+                let pag_conv = pag.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+                //prod.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+                let result = pag -= valor
+                let troco = result.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) //Variavél já convertida para R$
+                window.alert(`Você comprou ${prod} que custou ${valor_conv}.\n Deu ${pag_conv} em dinheiro e vai receber ${troco} de troco. \n Volte Sempre!`)
+            }
+    </script>
+    </main>
+    
+</body>
+</html>
