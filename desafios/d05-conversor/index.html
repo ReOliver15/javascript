@@ -4,26 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de medidas</title>
-    <style>
-        body {
-            background-color: lightgray;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        button {
-            padding: 20px;
-            font-size: 15px;
-        }
+    <link rel="stylesheet" href="style.css">
     </style>
 </head>
 <body>
-    <h1>Conversor de Medidas</h1>
-    <button onclick="convert()">Converter</button>
-    <p>Clique no botão acima para iniciar.</p>
+    <main>
+        <h1>Conversor de Medidas</h1>
+        <!--Botão que vai ativar a conversão-->
+        <button onclick="converterDistancia()">Converter</button>
+        <p id="texto">Clique no botão acima para iniciar.</p>
+        <div id="resultados"></div>
+    </main>
 
-    <script>
-        function convert() {
-            let valor = Number(window.prompt('Digite uma distância em metro(m): '))
-        }
-    </script>
+    <script src="conversor.js"></script>
 </body>
 </html>
